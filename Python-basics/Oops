@@ -1,3 +1,8 @@
+# import variables as var
+# var.myfunc()
+
+import datetime as d
+
 # Loop
 for x in range(6):
     if x==3:
@@ -198,3 +203,49 @@ def myfunc1():
   return x
 
 print(myfunc1())
+
+
+# ------------------- DATE TIME -------------------
+
+x=d.datetime.now()
+y=d.datetime(2025,2,15)
+y.strftime("%c")
+print(x)
+print(y)
+
+# ------------------- Math -------------------
+import math
+from decimal import Decimal,getcontext
+x=10
+y=2
+print(min(x,y),max(x,y),abs(x-y),pow(x,y))
+
+print(math.sqrt(5),math.ceil(5.5),math.floor(5.5),math.pi)
+
+def divideWithPrecision(a,b,precision):
+   getcontext().prec=precision+1
+   return Decimal(a)/Decimal(b)
+
+x=divideWithPrecision(10,3,5)
+print(x)
+
+
+# ------------------- JSON -------------------
+# converting json from python 
+import json
+x='{"name":"Pankaj","age":22,"city":"Delhi"}'
+
+y=json.loads(x)
+print(y["name"])
+
+# converting python from json
+x={
+   "name":"Pankaj",
+   "age":22,
+   "city":"Delhi"
+}
+y=json.dumps(x)
+print(y)
+
+
+

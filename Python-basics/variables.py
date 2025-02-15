@@ -64,3 +64,6 @@ myfunc()
 
 print("Python is " + x)
 print("Python is " + y)
+
+username=input("Enter username: ")
+print("hello "+username)
