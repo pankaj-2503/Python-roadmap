@@ -62,3 +62,54 @@ print(arr)
 # log -> log2,loge,log10
 # arr=np.arange(1,10)
 # print(np.log2(arr))
+
+
+from math import log
+import numpy as np
+
+nplog=np.frompyfunc(log,2,1)  # log with any base ,here log with 2 input and  1 output
+print(nplog(100,15))
+
+arr1=np.array([1,2,3])
+arr2=np.array([1,2,3])
+
+newarr=np.add(arr1,arr2)  # here it returns sum of array values at corresponding indexes
+print(newarr)
+
+nr=np.sum([arr1,arr2])  # here it returns sum of all elements
+print(nr)
+
+arr1=np.array([1,2,3])  # cumsum prints the sum as 1,1+2,1+2+3
+
+print(np.cumsum(arr1))
+print(np.prod(arr1))
+
+x=np.prod([arr1,arr2])
+
+print(x)
+
+newarr=np.cumprod(arr1) # cumprod prints the prod as 1,1*2,1*2*3
+print(newarr)
+
+arr=np.diff(arr1)
+print(arr)
+
+arr=np.diff(arr1,2) # computes diff array with 2 iterations finds diff again and again
+print(arr)
+
+x=2
+y=4
+
+num=np.lcm(x,y)
+print(num)
+
+num=np.gcd(x,y)
+print(num)
+
+arr=np.array([1,3,6,21])  
+x=np.lcm.reduce(arr)      # it basically gives the lowest common multiple of all 4 numbers
+print(x)
+
+
+x=np.gcd.reduce(arr)  # highest common factor in arr
+print(x)
