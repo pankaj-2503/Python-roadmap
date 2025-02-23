@@ -1,0 +1,2 @@
+newdf=df.dropna() # this method returns new dataframe and will not change origianl one , if we want to change the origianl one we use inplace=True inside this method
+# print(newdf.to_string())  # in our data.csv we have last row empty it has dropped it now
