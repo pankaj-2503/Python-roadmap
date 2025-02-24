@@ -55,6 +55,8 @@ data={
 x=pd.DataFrame(data)
 print(x)
 
+print(x.columns)  # shows all columns similarly rows
+
 print(x.loc[0])     # print row 0
 print(x.loc[[0,1]]) # print row 0 and 1 by passing list of indexes , iloc is also used to locate element based on index only
 print(x.iloc[1])
@@ -123,3 +125,6 @@ import matplotlib.pyplot as plt
 
 df.plot(kind='scatter',x='Duration',y='Calories')  # here we could use 'hist' for historgram
 plt.show()
+
+
+df.describe() # very powerful method show mean,median,standard deviation,min value,max value,count of non null values
